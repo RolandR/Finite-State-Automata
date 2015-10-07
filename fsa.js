@@ -4,7 +4,7 @@ var automaton = {
 	,states: [
 		 {
 			name: "s0"
-			,final: true
+			
 		}
 		,{
 			name: "s1"
@@ -84,3 +84,30 @@ function check(word){
 	}
 	
 }
+
+document.getElementById("automaton").innerHTML = "alphabet:\n\
+a\n\
+b\n\
+\n\
+states:\n\
+q1\n\
+q2\n\
+q3 final\n\
+\n\
+transitions:\n\
+q1 a q1\n\
+q1 b q2\n\
+q2 b q3\n\
+q2 a q2\n\
+q3 a q3\n\
+q3 b q3"
+
+var textInput = document.getElementById("textInput");
+
+textInput.oninput = function(){
+	if(check(textInput.value)){
+		textInput.style.backgroundColor="#AAFFAA";
+	} else {
+		textInput.style.backgroundColor="#FFAAAA";
+	}
+};

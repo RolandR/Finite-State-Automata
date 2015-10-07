@@ -4,10 +4,28 @@
 		<title>
 			Finite State Automata
 		</title>
+		<style>
+			body{
+				text-align: center;
+				font-family: sans-serif;
+			}
+			h1{
+				font-weight: 200;
+			}
+			#textInput{
+				font-size: 20px;
+				margin: 50px;
+			}
+			input, textArea{
+				display: inline-block;
+			}
+		</style>
 		<!--link href="./style.css" rel="stylesheet" type="text/css" media="all"-->
 	</head>
 	<body>
-		
+		<h1>Finite State Automatificator</h1>
+		<textArea id="automaton" rows="5" cols="50"></textArea><br />
+		<input type="text" placeholder="Word to validate..." id="textInput" autofocus></input>
 	</body>
 	<script type="text/javascript" src="./fsa.js"></script>
 </html>
